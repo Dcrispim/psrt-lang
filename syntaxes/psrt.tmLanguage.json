@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Picture SRT Format",
+  "patterns": [
+    {
+      "include": "#reserved-words"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#const-use"
+    },
+    {
+      "include": "#position"
+    },
+    {
+      "include": "#position-def"
+    },
+    {
+      "include": "#page-name"
+    }
+  ],
+  "repository": {
+    "reserved-words": {
+      "match": "(\\$CONSTS|\\$ENDCONSTS|\\$FONTS|\\$ENDCONSTS|\\$START|\\$END)",
+      "name": "entity.name.function.member.psrt"
+    },
+    "position": {
+      "match": "(?<=>>)(\\d*.\\d*-\\d*.\\d*-\\d*.\\d*-\\d*.\\d*)(?=|)",
+      "name": "variable.name"
+    },
+    "position-def": {
+      "match": ">>",
+      "name": "variable.language"
+    },
+    "strings": {
+      "name": "string.quoted.double.psrt",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.psrt",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "const-use": {
+      "name": "constant.character.escape",
+      "begin": "@",
+      "end": "@| "
+    }
+  },
+  "scopeName": "source.psrt"
+}

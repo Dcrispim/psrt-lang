@@ -1,0 +1,25 @@
+{
+    "name": "psrt",
+    "displayName": "PSRT",
+    "description": "Picture SRT",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "psrt",
+            "aliases": ["Picture SRT Format", "psrt"],
+            "extensions": [".psrt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "psrt",
+            "scopeName": "source.psrt",
+            "path": "./syntaxes/psrt.tmLanguage.json"
+        }]
+    }
+}
