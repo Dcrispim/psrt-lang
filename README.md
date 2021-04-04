@@ -1,11 +1,11 @@
-# Format \ *. Psrt
+# Format \ \*. Psrt
 
 This is a caption for comics (manga) images. It was created to facilitate the translations of the comics
 
 ## Pattern
 
 All positions in the texts of the .psrt file are in percentages in relation to the image measurements
-`>>` `<X>%` -` <Y>% `-` <Width>%` -` <TextSize>% `
+`>>` `<X>%` -`<Y>%`-` <Width>%` -`<TextSize>%`
 
 ### Pages
 
@@ -22,7 +22,7 @@ $ END <page-name>
 ```
 
 example:
-! [alternative text] (assets / psrt_expample_1.png "Title")
+! [alternative text] (./assets/psrt_expample_1.png "Title")
 
 ### Sources
 
@@ -36,7 +36,7 @@ $ ENDFONTS
 ```
 
 example:
-! [alternative text] (assets / psrt_expample_2.png "Title")
+! [alternative text] (./assets/psrt_expample_2.png "Title")
 
 ### Constants
 
@@ -59,7 +59,7 @@ $ ENDCONSTS
 
 example:
 No constants
-![No constants example](assets/psrt_expample_4.png "Title")
+![No constants example](./assets/psrt_expample_4.png "Title")
 
 With constants
-![constants example](assets/psrt_expample_3.png "Title")
+![constants example](./assets/psrt_expample_3.png "Title")
