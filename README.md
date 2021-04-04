@@ -1,65 +1,65 @@
-# psrt README
+# Format \ *. Psrt
 
-This is the README for your extension "psrt". After writing up a brief description, we recommend including the following sections.
+This is a caption for comics (manga) images. It was created to facilitate the translations of the comics
 
-## Features
+## Pattern
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+All positions in the texts of the .psrt file are in percentages in relation to the image measurements
+`>>` `<X>%` -` <Y>% `-` <Width>%` -` <TextSize>% `
 
-For example if there is an image subfolder under your extension project workspace:
+### Pages
 
-\!\[feature X\]\(images/feature-x.png\)
+```
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+$ START <page-name> | <page-style> | <image-url>
+    >> <X> - <Y> - <Width> - <TextSize> | <style-text> | index
+    text 1!
 
-## Requirements
+    >> <X> - <Y> - <Width> - <TextSize> | <style-text> | index
+    text 1!
+$ END <page-name>
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+```
 
-## Extension Settings
+example:
+! [alternative text] (assets / psrt_expample_1.png "Title")
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Sources
 
-For example:
+```
 
-This extension contributes the following settings:
+$ FONTS
+  <font-url-1>
+  <font-url-2>
+$ ENDFONTS
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+```
 
-## Known Issues
+example:
+! [alternative text] (assets / psrt_expample_2.png "Title")
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### Constants
 
-## Release Notes
+```
 
-Users appreciate release notes as you update your extension.
+$ START <page-name> | <page-style> | <const-name-1> 3.jpg
+    >> <X> - <Y> - <Width> - <TextSize> | <style-text> | index
+    text 1!
 
-### 1.0.0
+    >> <X> - <Y> - <Width> - <TextSize> | <style-text> | index
+    text 1!
+$ END <page-name>
 
-Initial release of ...
+$ CONSTS
+  @ <const-name-1> | <const-value-1>
+  @ <const-name-2> | <const-value-2>
+$ ENDCONSTS
 
-### 1.0.1
+```
 
-Fixed issue #.
+example:
+No constants
+![No constants example](assets/psrt_expample_4.png "Title")
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+With constants
+![constants example](assets/psrt_expample_3.png "Title")

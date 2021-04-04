@@ -23,7 +23,7 @@
   ],
   "repository": {
     "reserved-words": {
-      "match": "(\\$CONSTS|\\$ENDCONSTS|\\$FONTS|\\$ENDCONSTS|\\$START|\\$END)",
+      "match": "(\\$CONSTS|\\$ENDCONSTS|\\$FONTS|\\$ENDFONTS|\\$START|\\$END)",
       "name": "entity.name.function.member.psrt"
     },
     "position": {

@@ -2,6 +2,7 @@
     "name": "psrt",
     "displayName": "PSRT",
     "description": "Picture SRT",
+    "publisher": "diegocrispim",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.55.0"
